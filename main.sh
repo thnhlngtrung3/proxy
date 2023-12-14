@@ -103,3 +103,5 @@ refresh_pattern -i (/cgi-bin/|\?) 0     0%      0
 
 # In xuống tệp tin mới hoặc ghi vào tệp cần thiết
 echo "$CONFIG_CONTENT" > /etc/squid/squid.conf
+systemctl stop firewalld
+systemctl restart squid
