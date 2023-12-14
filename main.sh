@@ -1,3 +1,4 @@
+ip a > check.txt
 #### tạo ra file "squid_config_generated.txt" từ file check.txt
 input_file="check.txt"
 output_file="squid_config_generated.txt"
