@@ -28,7 +28,7 @@ echo "Đã tạo ra $num_lines cấu hình port trong file \"$output_file\"."
 ### tạo ra config file từ squid_config_generated.txt
 
 
-SQUID_CONFIG_CONTENT=$(cat /path/to/squid_config_generated.txt)
+SQUID_CONFIG_CONTENT=$(cat squid_config_generated.txt)
 CONFIG_CONTENT="
 #
 # Recommended minimum configuration:
