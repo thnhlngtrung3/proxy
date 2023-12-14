@@ -19,9 +19,12 @@ while IFS= read -r line; do
   if [[ $line =~ inet6.*\/64 ]]; then
     ipv6_address=$(echo "$line" | awk '{print $2}' | sed 's:/.*::')
 
-    http_ports+="http_port $current_port"$'\n'
-    acl_ports+="acl ip$((current_port - FIRST_PORT + 1)) localport $current_port"$'\n'
-    tcp_outgoing_addresses+="tcp_outgoing_address $ipv6_address ip$((current_port - FIRST_PORT + 1))"$'\n'
+    http_ports+="http_port $current_port
+    "
+    acl_ports+="acl ip$((current_port - FIRST_PORT + 1)) localport $current_port
+    "
+    tcp_outgoing_addresses+="tcp_outgoing_address $ipv6_address ip$((current_port - FIRST_PORT + 1))
+    "
 
     current_port=$((current_port + 1))
   fi
