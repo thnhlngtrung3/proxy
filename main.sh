@@ -9,7 +9,7 @@ if [ "$num_lines" -eq 0 ]; then
   exit 1
 fi
 
-FIRST_PORT=3128
+FIRST_PORT=22000
 echo "" > "$output_file"
 current_port=$FIRST_PORT
 
